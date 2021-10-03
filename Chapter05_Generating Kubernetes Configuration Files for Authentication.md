@@ -65,7 +65,7 @@ apiVersion: v1
 clusters:
 - cluster:
     certificate-authority-data: <ca.pem content here>   # --certificate-authority=ca.pem --embed-certs=true
-	server: https://kthw-explained.com:443  # --server=https://${KUBERNETES_PUBLIC_ADDRESS}:443
+    server: https://kthw-explained.com:443  # --server=https://${KUBERNETES_PUBLIC_ADDRESS}:443
   name: kubernetes-the-hard-way # set-cluster kubernetes-the-hard-way
 contexts: null
 current-context: ""
@@ -94,7 +94,7 @@ apiVersion: v1
 clusters:
 - cluster:
     certificate-authority-data: <ca.pem content here> 
-	server: https://kthw-explained.com:443
+    server: https://kthw-explained.com:443
   name: kubernetes-the-hard-way
 contexts: null
 current-context: ""
@@ -104,7 +104,7 @@ users:
 - name: system:node:worker1   # set-credentials system:node:${instance}
   user:
     client-certificate-data: <worker-0.pem content here>  # --client-certificate=${instance}.pem --embed-certs=true
-		client-key-data: <worker-0-key.pem content here>  # --client-key=${instance}-key.pem --embed-certs=true
+    client-key-data: <worker-0-key.pem content here>  # --client-key=${instance}-key.pem --embed-certs=true
 ```
 - Third command: set-context sets a kubeconfig context
 ```bash
@@ -120,7 +120,7 @@ apiVersion: v1
 clusters:
 - cluster:
     certificate-authority-data: <ca.pem content here> 
-	server: https://kthw-explained.com:443
+    server: https://kthw-explained.com:443
   name: kubernetes-the-hard-way
 contexts:
 - context:  # set-context default
@@ -134,7 +134,7 @@ users:
 - name: system:node:worker1
   user:
     client-certificate-data: <worker-0.pem content here>
-		client-key-data: <worker-0-key.pem content here>
+    client-key-data: <worker-0-key.pem content here>
 ```
 - Forth command: `use-context` sets the current context in a kubeconfig file.
 ```bash
@@ -148,7 +148,7 @@ apiVersion: v1
 clusters:
 - cluster:
     certificate-authority-data: <ca.pem content here> 
-	server: https://kthw-explained.com:443
+    server: https://kthw-explained.com:443
   name: kubernetes-the-hard-way
 contexts:
 - context:
@@ -162,7 +162,7 @@ users:
 - name: system:node:worker1
   user:
     client-certificate-data: <worker-0.pem content here>
-	client-key-data: <worker-0-key.pem content here>
+    client-key-data: <worker-0-key.pem content here>
 ```
 One caveat is that, in order to be authorized by the Node Authorizer, the kubelet kubeconfig file must use `system:node:<nodeName>` as a username.
 
