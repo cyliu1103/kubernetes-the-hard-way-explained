@@ -66,7 +66,7 @@ apiVersion: v1
 clusters:
 - cluster:
     certificate-authority-data: <ca.pem content>
-	server: https://kube-loadbalancer.aws.com:443
+    server: https://kube-loadbalancer.aws.com:443
   name: kubernetes-the-hard-way
 contexts: null
 current-context: ""
