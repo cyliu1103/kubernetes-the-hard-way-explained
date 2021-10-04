@@ -26,3 +26,6 @@ Please also keep in mind of below diagram. It shows the communications between K
 (9) Clients (such as `kubectl`) talks to API Server (Not shown in this diagram)
 
 ![Kubernetes Components, taken from Official [Document](https://kubernetes.io/docs/concepts/overview/components/)](components-of-kubernetes.svg "Title")
+
+---
+
